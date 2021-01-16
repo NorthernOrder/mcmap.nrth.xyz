@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NRTH Minecraft Maps</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
+      }
+
+      html {
+        font-family: Verdana, Helvetica, Arial, sans-serif;
+        overflow: hidden;
+      }
+
+      body {
+        color: var(--color);
+        background-color: var(--background-color);
+      }
+
+      .light-theme {
+        --color: black;
+        --background-color: #fff;
+        --hover-color: #ccc;
+      }
+
+      .dark-theme {
+        --color: #ddd;
+        --background-color: #333;
+        --hover-color: #444;
+      }
+
+      .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      img {
+        border-radius: 4rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        padding-top: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 32px;
+      }
+
+      a {
+        color: var(--color);
+        text-decoration: none;
+        border: 1px solid black;
+        padding: 10px;
+        box-shadow: 3px 4px 7px black;
+        margin-bottom: 24px;
+      }
+
+      a:hover {
+        background-color: var(--hover-color);
+      }
+
+      a:active {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 7px black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div style="flex-grow: 1"></div>
+      <img
+        src="https://files.nrth.xyz/brand/logos/logo.png"
+        width="128"
+        height="128"
+      />
+      <div style="flex-grow: 0.1"></div>
+      <h1>Northern Order's Minecraft Server Maps</h1>
+      <a href="/survival">Northern Survival</a>
+      <a href="/creative">Northern Creative</a>
+      <a href="/builds">Northern Builds</a>
+      <div style="flex-grow: 3"></div>
+    </div>
+    <script>
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.body.classList.add("dark-theme");
+      } else {
+        document.body.classList.add("light-theme");
+      }
+    </script>
+  </body>
+</html>
